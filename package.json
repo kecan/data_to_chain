@@ -1,0 +1,38 @@
+{
+  "name": "data-to-chain",
+  "version": "1.0.0",
+  "description": "数据上链练习项目 - 使用ethers.js和智能合约将数据存储到区块链，通过The Graph查询数据",
+  "main": "index.js",
+  "scripts": {
+    "compile": "hardhat compile",
+    "deploy": "hardhat run scripts/hardhat-deploy.js --network sepolia",
+    "deploy:simple": "node scripts/deploy.js",
+    "verify": "hardhat verify --network sepolia",
+    "test": "hardhat test",
+    "graph:codegen": "cd subgraph && graph codegen",
+    "graph:build": "cd subgraph && graph build",
+    "graph:deploy": "cd subgraph && graph deploy --studio data-to-chain"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "web3",
+    "ethers",
+    "solidity",
+    "the-graph",
+    "dapp",
+    "sepolia"
+  ],
+  "author": "kecan",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.0",
+    "@graphprotocol/graph-cli": "^0.51.0",
+    "@graphprotocol/graph-ts": "^0.30.0",
+    "hardhat": "^2.14.0",
+    "dotenv": "^16.0.0"
+  },
+  "dependencies": {
+    "ethers": "^5.7.2"
+  }
+}
